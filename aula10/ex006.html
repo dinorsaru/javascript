@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventos DOM</title>
+    <style>
+        div#area{
+            background-color: greenyellow;
+            color: white;
+            width: 400px;
+            height: 400px;
+            line-height: 400px;
+            text-align: center;
+            font-size: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        interaja...
+    </div>
+    <script>
+        var a = window.document.getElementById('area')
+        function clicar() {
+            a.innerText = 'clicou!'
+            a.style.backgroundColor = 'red'
+        }
+        function entrar() {
+            a.innerText = 'entrou!'
+        }
+        function sair(){
+            a.innerText = 'saiu!'
+            a.style.backgroundColor = 'green'
+        }
+            
+    </script>
+</body>
+</html>
